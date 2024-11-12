@@ -14,10 +14,11 @@ docker compose up -d
 ![](https://github.com/glynzr/RabbitMQ-usage-demo/raw/main/images/docker_rabbitmq.png)
 
 RabbitMQ Dashboard is now available on port 15762
-<!-- add image here -->
+![](https://github.com/glynzr/RabbitMQ-usage-demo/raw/main/images/rabbitmq_dashboard.png)
+
 
 Default credentials will be *guest*:*guest*
-<!-- add image here -->
+![](https://github.com/glynzr/RabbitMQ-usage-demo/raw/main/images/rabbitmq_overview.png)
 
 - Running microservices
 As required in the task, I have added two microservices as consumers,and one publisher microservice. Publisher microservice generates random emails every 5 minutes.
@@ -49,13 +50,28 @@ node publisher.js
 ```
 
 As can be seen from the given screenshots only one consumer microservice handles one email.
-<!-- add image here -->
+
+![](https://github.com/glynzr/RabbitMQ-usage-demo/raw/main/images/terminal_1.png)
+
+![](https://github.com/glynzr/RabbitMQ-usage-demo/raw/main/images/terminal_2.png)
+
+![](https://github.com/glynzr/RabbitMQ-usage-demo/raw/main/images/terminal_3.png)
 
 At the same time, email queue details could be seen on RabbitMQ dashboard:
-<!-- add image here -->
+![](https://github.com/glynzr/RabbitMQ-usage-demo/raw/main/images/dashboard_1.png)
+
+![](https://github.com/glynzr/RabbitMQ-usage-demo/raw/main/images/dashboard_2.png)
+
+![](https://github.com/glynzr/RabbitMQ-usage-demo/raw/main/images/dashboard_3.png)
+
+![](https://github.com/glynzr/RabbitMQ-usage-demo/raw/main/images/dashboard_4.png)
+
+![](https://github.com/glynzr/RabbitMQ-usage-demo/raw/main/images/dashboard_5.png)
+
+![](https://github.com/glynzr/RabbitMQ-usage-demo/raw/main/images/dashboard_6.png)
 
 ## Project system design
-<!-- add image here -->
+![](https://github.com/glynzr/RabbitMQ-usage-demo/raw/main/images/system.png)
 
 ## Learning outcomes
 RabbitMQ enables asynchronous communication; a producer (sender)  sends messages that are stored in a queue until a consumer (receiver) is ready to process them as a result we are decoupling producers and consumers. This  improves scalability, reliability, and responsiveness in applications by allowing different components to work independently. 
