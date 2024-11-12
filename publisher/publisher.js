@@ -4,6 +4,7 @@ require('dotenv').config({ path: '../.env' });
 
 async function publishEmails() {
   try {
+    console.log('Connecting to RabbitMQ at:', process.env.RABBITMQ_URL);
     const connection = await amqp.connect(process.env.RABBITMQ_URL);
     const channel = await connection.createChannel();
     const queue = 'email';
@@ -13,9 +14,9 @@ async function publishEmails() {
     setInterval(() => {
       const email = {
         title: `Email Subject - ${Math.random().toString(36).substring(7)}`,
-        body: `This is a sample email body.`,
+        body: `Sample email body.`,
         recipients: [`user${Math.floor(Math.random() * 100)}@example.com`],
-        sender: `sender@example.com`
+        sender: `sender@fakecompany.me`
       };
       channel.sendToQueue(queue, Buffer.from(JSON.stringify(email)), {
         persistent: true

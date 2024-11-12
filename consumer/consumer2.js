@@ -4,6 +4,7 @@ require('dotenv').config({ path: '../.env' });
 
 async function consumeEmails() {
   try {
+    console.log('Connecting to RabbitMQ at:', process.env.RABBITMQ_URL);
     const connection = await amqp.connect(process.env.RABBITMQ_URL);
     const channel = await connection.createChannel();
     const queue = 'email';
