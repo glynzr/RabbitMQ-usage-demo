@@ -11,7 +11,7 @@ cd RabbitMQ-usage-demo
 ```bash
 docker compose up -d
 ```
-<!-- add image here -->
+![](https://github.com/glynzr/RabbitMQ-usage-demo/raw/main/images/docker_rabbitmq.png)
 
 RabbitMQ Dashboard is now available on port 15762
 <!-- add image here -->
